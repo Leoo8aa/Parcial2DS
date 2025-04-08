@@ -1,11 +1,10 @@
 # app.py (Streamlit)
 import streamlit as st
 import numpy as np
-import pickle
 
 
-with open("best_model.pkl", "rb") as file:
-    model = pickle.load(file)
+# Cargar el modelo
+model = joblib.load("best_model.pkl")
 
 # Título de la app
 st.title("Clasificador de Arroz")
